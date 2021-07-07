@@ -77,7 +77,8 @@ spec:
       containers:
       - name: es-client
         securityContext:
-          privileged: false
+          privileged: true
+          runAsUser: 0
           capabilities:
             add:
               - IPC_LOCK
